@@ -1,0 +1,38 @@
+diff --git a/node_modules/expo-router/build/views/Sitemap.js b/node_modules/expo-router/build/views/Sitemap.js
+index d5f2b4b..abe7484 100644
+--- a/node_modules/expo-router/build/views/Sitemap.js
++++ b/node_modules/expo-router/build/views/Sitemap.js
+@@ -130,16 +130,16 @@ function FileItem({ route, level = 0, parents = [], isInitial = false, }) {
+     </>);
+ }
+ function FileIcon() {
+-    return <react_native_1.Image style={styles.image} source={require('expo-router/assets/file.png')}/>;
++    return <react_native_1.Image style={styles.image} source={require('../../assets/file.png')}/>;
+ }
+ function PkgIcon() {
+-    return <react_native_1.Image style={styles.image} source={require('expo-router/assets/pkg.png')}/>;
++    return <react_native_1.Image style={styles.image} source={require('../../assets/pkg.png')}/>;
+ }
+ function ForwardIcon() {
+-    return <react_native_1.Image style={styles.image} source={require('expo-router/assets/forward.png')}/>;
++    return <react_native_1.Image style={styles.image} source={require('../../assets/forward.png')}/>;
+ }
+ function SitemapIcon() {
+-    return <react_native_1.Image style={styles.image} source={require('expo-router/assets/sitemap.png')}/>;
++    return <react_native_1.Image style={styles.image} source={require('../../assets/sitemap.png')}/>;
+ }
+ const styles = react_native_1.StyleSheet.create({
+     container: {
+diff --git a/node_modules/expo-router/build/views/Unmatched.js b/node_modules/expo-router/build/views/Unmatched.js
+index 31fe794..69a15e6 100644
+--- a/node_modules/expo-router/build/views/Unmatched.js
++++ b/node_modules/expo-router/build/views/Unmatched.js
+@@ -119,7 +119,7 @@ function Unmatched() {
+     </react_native_1.View>);
+ }
+ function NotFoundAsset() {
+-    return <react_native_1.Image source={require('expo-router/assets/unmatched.png')} style={styles.image}/>;
++    return <react_native_1.Image source={require('../expo-router/assets/unmatched.png')} style={styles.image}/>;
+ }
+ const styles = react_native_1.StyleSheet.create({
+     container: {
