@@ -4,7 +4,7 @@ import * as FileSystem from "expo-file-system";
 //import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
-//const modelJson = "https://cdn.jsdelivr.net/gh/kichu12348/tesing_tfs_model@main/model.json";
+//const modelJson = "https://cdn.jsdelivr.net/gh/kichu12348/new_kids@main/assets/tfjs_model/model.json";
 const modelJson= bundleResourceIO(
     require("../../assets/tfjs_model/model.json"),
     [
@@ -14,11 +14,13 @@ const modelJson= bundleResourceIO(
     ]
 )
 
-async function loadModel() {
+async function loadModel(progressCallback=()=>{}) {
   try {
     await tf.ready();
    // console.log(tf.version.tfjs)
-    const model = await tf.loadGraphModel(modelJson)
+    const model = await tf.loadGraphModel(modelJson,{
+        onProgress:progressCallback
+    });
     return model;
   } catch (error) {
     console.error("Error loading model:", error);
